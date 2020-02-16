@@ -32,12 +32,20 @@ class CustomerContainer extends Component {
     return (
       <div>
         <NavBar />
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input type="text" name="keyword" onChange={this.handleInput}/>
+        <div className="container">
+          <div className="row mt-5">
+            <div className="col-4 offset-4 mt-5">
+              <form onSubmit={this.handleSubmit} className="mt-5">
+                <div>
+                  <input type="text" name="keyword" onChange={this.handleInput}
+                    className="form-control"
+                  />
+                </div>
+                <button className="btn btn-danger mt-3 offset-4"><div className="text-light h4">Search</div></button>
+              </form>
+            </div>
           </div>
-          <button>Search</button>
-        </form>
+        </div>
       </div>
     )
   }

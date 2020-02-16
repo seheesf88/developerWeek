@@ -99,8 +99,24 @@ class BusinessList extends Component {
     return (
       <div>
         <NavBar />
-        <Link to="/customer">Search</Link>
-        <ListComponent lists={this.state.stores}/>
+        <div className="container">
+          <div className="row">
+            <div className="col-2 my-5">
+              <div className="text-center">
+                <Link to="/customer">
+                  <div className="text-dark h6 px-3 pt-1">
+                    Back to Search
+                    </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-8" offset-2>
+              <ListComponent lists={this.state.stores}/>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
