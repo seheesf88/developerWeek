@@ -6,14 +6,38 @@ import NavBar from '../NavBar';
 
 class CustomerContainer extends Component {
   constructor(){
-    super()
+    super();
+
+    this.state = {
+      keyword: ''
+    }
   }
+
+  handleInput = (e) => {
+    console.log(e.target.value);
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
+
+  handleSubmit = e => {
+    e.preventDefault();
+    localStorage.setItem('keyword', this.state.keyword)
+    this.props.history.push('/customer/businesslist')
+  }
+
 
   render(){
     return (
       <div>
         <NavBar />
-        njnj
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <input type="text" name="keyword" onChange={this.handleInput}/>
+          </div>
+          <button>Search</button>
+        </form>
       </div>
     )
   }

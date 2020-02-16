@@ -7,6 +7,8 @@ import { Route, Switch } from 'react-router-dom'
 import MainContainer from './MainContainer';
 import BusinessContainer from './BusinessContainer';
 import CustomerContainer from './CustomerContainer';
+import BusinessList from './BusinessList';
+
 
 const my404 = () => {
   return (
@@ -22,6 +24,7 @@ const App = () => {
         <Route exact path="/" component = { MainContainer } />
         <Route exact path="/business" component = { BusinessContainer } />
         <Route exact path="/customer" component = { CustomerContainer } />
+        <Route exact path="/customer/businesslist" component = { BusinessList } />
       </Switch>
     </main>
   );
