@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom';
 import NavBar from '../NavBar';
-import BusinessList from '../BusinessList';
+import ItemContanier from '../ItemContanier';
 
 class BusinessContainer extends Component {
   constructor(){
@@ -15,10 +15,7 @@ class BusinessContainer extends Component {
     return (
       <div>
         <NavBar />
-        <div>
-          <input />
-        </div>
-        <BusinessList />
+        <ItemContanier />
       </div>
     )
   }
