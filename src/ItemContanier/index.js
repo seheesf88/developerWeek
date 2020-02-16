@@ -54,28 +54,35 @@ class ItemContanier extends Component {
 
   render(){
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-6 offset-2">
-            <form onSubmit={this.addItem}>
+      <div className="container mt-5">
+        <div className="row mt-5">
+          <div className="col-8">
+            <form onSubmit={this.addItem} className="form-inline">
               <div className="form-group" >
-                Item
-                <input className="form-control" name="itemName" onChange={this.handleInput}/>
+
+                  <div className="">Item:</div>
+                  <input className="form-control" name="itemName" onChange={this.handleInput}/>
+
               </div>
               <div className="form-group">
-                Qty
-                <input className="form-control" name="qty" onChange={this.handleInput}/>
+
+                  <div className="">Qty:</div>
+                  <input className="form-control" name="qty" onChange={this.handleInput}/>
+
               </div>
+
+
+
               <div className="form-group">
                 Original Price
                 <input className="form-control" name="oriPrice" onChange={this.handleInput}/>
               </div>
               <div className="form-group">
-                Discount(%)
-                <input className="form-control" name="discount" onChange={this.handleInput}/>
+                <span>Discount(%)</span>
+                <span><input className="form-control" name="discount" onChange={this.handleInput}/></span>
               </div>
               <div className="form-group">
-                
+
               </div>
               <button className="btn btn-primary">Submit</button>
             </form>
