@@ -13,6 +13,7 @@ class CustomerContainer extends Component {
     return (
       <div>
         <NavBar />
+        njnj
       </div>
     )
   }
