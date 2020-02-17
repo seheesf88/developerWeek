@@ -5,8 +5,10 @@ const ListComponent = (props) => {
   console.log(props)
 
   const lists = props.lists.map(list => {
+        //<td><Link to={`/${list._id}`}>{list.poi.name}</Link></td>
     return <tr key={list._id} className="text-center">
-            <td><Link to={`/${list._id}`}>{list.poi.name}</Link></td>
+            <td><Link to={`/example`}>{list.poi.name}</Link></td>
+
             <td>{list.address.streetNumber}</td>
             <td>{list.address.streetName}</td>
             <td>{list.address.municipality}</td>

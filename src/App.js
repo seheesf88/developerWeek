@@ -8,6 +8,7 @@ import MainContainer from './MainContainer';
 import BusinessContainer from './BusinessContainer';
 import CustomerContainer from './CustomerContainer';
 import BusinessList from './BusinessList';
+import SaleItemContainer from './SaleItemContainer';
 
 
 const my404 = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path="/business" component = { BusinessContainer } />
         <Route exact path="/customer" component = { CustomerContainer } />
         <Route exact path="/customer/businesslist" component = { BusinessList } />
+        <Route exact path="/example" component = { SaleItemContainer } />
       </Switch>
     </main>
   );

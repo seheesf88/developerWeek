@@ -9,14 +9,15 @@ class ItemContanier extends Component {
       item : {
         itemName : '',
         qty: '',
-        oriPrice: '',
-        discount: '',
+        oriPrice: 0,
+        discount: 0,
       }
     }
   }
 
   handleInput = (e) => {
     console.log(e.target.value)
+
     this.setState({
       item : {
         ...this.state.item,
@@ -53,38 +54,133 @@ class ItemContanier extends Component {
 
 
   render(){
+    var newprice = this.state.oriPrice * (100 - this.state.discount)/100
+
     return (
       <div className="container mt-5">
         <div className="row mt-5">
-          <div className="col-8">
-            <form onSubmit={this.addItem} className="form-inline">
-              <div className="form-group" >
-
-                  <div className="">Item:</div>
-                  <input className="form-control" name="itemName" onChange={this.handleInput}/>
-
+          <div className="col-11">
+            <form onSubmit={this.addItem}>
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
               </div>
-              <div className="form-group">
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
 
-                  <div className="">Qty:</div>
-                  <input className="form-control" name="qty" onChange={this.handleInput}/>
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
 
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
+
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
+
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
+
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
+
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
+              </div>
+
+              <div className="form-inline offset-1 mt-2">
+                <div className="ml-3 mr-1">Item:</div>
+                  <input className="form-control col-3" name="itemName" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Qty:</div>
+                  <input className="form-control col-1" name="qty" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Original Price:</div>
+                  <input className="form-control col-1" name="oriPrice" onChange={this.handleInput}/>
+                <div className="ml-3 mr-1">Discount(%):</div>
+                  <input className="form-control col-1" name="discount" onChange={this.handleInput}/>
+                <div className="ml-2">New Price:</div>
+                  <div className="ml-1">$0.00</div>
               </div>
 
 
-
-              <div className="form-group">
-                Original Price
-                <input className="form-control" name="oriPrice" onChange={this.handleInput}/>
+              <div className="text-right mt-5">
+                <button className="btn btn-primary">Submit</button>
               </div>
-              <div className="form-group">
-                <span>Discount(%)</span>
-                <span><input className="form-control" name="discount" onChange={this.handleInput}/></span>
-              </div>
-              <div className="form-group">
-
-              </div>
-              <button className="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>

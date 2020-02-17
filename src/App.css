@@ -9,6 +9,17 @@
   width: 80px;
 }
 
+.menuImg {
+  height: 80%;
+  width: 80%;
+
+}
+
+.tomato {
+  height: 30px;
+  width: 30px;
+}
+
 /* .App {
   text-align: center;
 }
